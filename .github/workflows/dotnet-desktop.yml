@@ -66,5 +66,5 @@ jobs:
     - name: Build DotNET
       run: |
            cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
-           .\MSBuild.exe $Env:GITHUB_WORKSPACE\  **SLN or project**byte)
+           .\MSBuild.exe $Env:GITHUB_WORKSPACE\ResxFileExporter.sln
 
