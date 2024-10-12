@@ -43,13 +43,9 @@ partial class Form1
         label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label1.Location = new Point(12, 9);
         label1.Name = "label1";
-        label1.Size = new Size(116, 21);
+        label1.Size = new Size(249, 21);
         label1.TabIndex = 0;
-        label1.Text = "Select RESX file";
-        // 
-        // openFileDialog1
-        // 
-        openFileDialog1.FileName = "openFileDialog1";
+        label1.Text = "Select/drop RESX or Resources file";
         // 
         // button1
         // 
@@ -64,7 +60,7 @@ partial class Form1
         // label2
         // 
         label2.AutoSize = true;
-        label2.Location = new Point(12, 71);
+        label2.Location = new Point(12, 115);
         label2.Name = "label2";
         label2.Size = new Size(37, 15);
         label2.TabIndex = 2;
@@ -73,7 +69,7 @@ partial class Form1
         // button2
         // 
         button2.Enabled = false;
-        button2.Location = new Point(12, 89);
+        button2.Location = new Point(12, 62);
         button2.Name = "button2";
         button2.Size = new Size(75, 23);
         button2.TabIndex = 3;
@@ -85,7 +81,7 @@ partial class Form1
         // 
         listBox1.FormattingEnabled = true;
         listBox1.ItemHeight = 15;
-        listBox1.Location = new Point(160, 9);
+        listBox1.Location = new Point(308, 9);
         listBox1.Name = "listBox1";
         listBox1.Size = new Size(120, 94);
         listBox1.TabIndex = 4;
@@ -93,9 +89,10 @@ partial class Form1
         // 
         // Form1
         // 
+        AllowDrop = true;
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(324, 153);
+        ClientSize = new Size(440, 153);
         Controls.Add(listBox1);
         Controls.Add(button2);
         Controls.Add(label2);
@@ -105,6 +102,8 @@ partial class Form1
         MaximizeBox = false;
         Name = "Form1";
         Text = "ResxFileExporter";
+        DragDrop += Form1_DragDrop;
+        DragEnter += Form1_DragEnter;
         ResumeLayout(false);
         PerformLayout();
     }
